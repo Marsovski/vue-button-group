@@ -1,7 +1,7 @@
 <template>
         <button
             @click="selectBtn"
-            :class="{ select: selectClass }"
+            :class="{ select: select ? selectClass = select : select }"
             type="button"
             ><slot></slot>
         </button>
@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        props: ['ides'],
+        props: ['ides', 'select'],
         data: function () {
             return {
                 selectClass: false

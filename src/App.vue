@@ -2,7 +2,8 @@
     <div class="container">
         <app-group-button
             :states="weeks"
-            @selectButton="selectBtn"
+            :state="week"
+            @selectButton="week = $event"
             >
         </app-group-button>
 
@@ -18,7 +19,7 @@
     export default {
         data: function () {
             return {
-                week: [],
+                week: [{id: 3}, {id: 5}],
                 weeks: [
                     {id: 1, name: 'Monday'},
                     {id: 2, name: 'Tuesday'},
@@ -31,10 +32,7 @@
             }
         },
         methods: {
-            selectBtn(index) {
-                this.week = index;
-                console.log('state ', index);
-            }
+
         },
         components: {
             appGroupButton: GroupButton,

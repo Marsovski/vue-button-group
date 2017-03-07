@@ -1,11 +1,12 @@
 <template>
     <div class="row">
         <app-button
-            v-for="state in states"
-            :ides="state.id"
+            v-for="val in states"
+            :ides="val.id"
+            :select="bindss(val.id)"
             @selectButtonEmit="selectBtn"
             >
-            {{ state.name }}
+            {{ val.name }}
         </app-button>
     </div>
 </template>
@@ -16,19 +17,30 @@
     export default {
         props: {
             states: {
-                type: [Object, Array]
-                // required: true,
+                type: [Object, Array],
+                required: true
+                // ,
                 // validator: function(val) {
                 //     return val.length > 0;
                 // }
-            }
-        },
-        data: function () {
-            return {
-                state: []
+            },
+            state: {
+                type: [Object, Array],
+                required: false,
+                default: []
             }
         },
         methods: {
+            bindss(ides){
+                var st = this.state;
+                var status = false;
+                st.forEach(function(val) {
+                     if (val.id == ides) {
+                         status = true;
+                     }
+                });
+                return status;
+            },
             selectBtn(ides) {
                 var i = 0;
                 // states selected
@@ -36,7 +48,7 @@
 
                 //
                 st.forEach(function(val) {
-                    if (val == ides) {
+                    if (val.id == ides) {
                         i++;
                     }
                 });
@@ -44,11 +56,11 @@
 
                 if (i === 0) {
                     // Add selected
-                    st.push(ides);
+                    st.push({id: ides});
                 } else if(i > 0) {
                     // Remove selected
                     st.forEach(function(val, key) {
-                        if (val == ides) {
+                        if (val.id == ides) {
                             st.splice(key, 1);
                         }
                     });
