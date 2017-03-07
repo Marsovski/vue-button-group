@@ -36,7 +36,7 @@
 
                 //
                 st.forEach(function(val) {
-                    if (val == ides) {
+                    if (val.id == ides) {
                         i++;
                     }
                 });
@@ -44,11 +44,11 @@
 
                 if (i === 0) {
                     // Add selected
-                    st.push(ides);
+                    st.push({id: ides});
                 } else if(i > 0) {
                     // Remove selected
                     st.forEach(function(val, key) {
-                        if (val == ides) {
+                        if (val.id == ides) {
                             st.splice(key, 1);
                         }
                     });
