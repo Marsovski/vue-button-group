@@ -31,9 +31,6 @@
                 ]
             }
         },
-        methods: {
-
-        },
         components: {
             appGroupButton: GroupButton,
             appButton: Button
