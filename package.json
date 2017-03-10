@@ -11,6 +11,16 @@
     "bootstrap": "^3.3.7",
     "vue": "^2.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marsovski/vue-button-group.git"
+  },
+  "author": "Milos Markovic <milos.markovic@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Marsovski/vue-button-group/issues"
+  },
+  "homepage": "https://github.com/Marsovski/vue-button-group#readme",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
