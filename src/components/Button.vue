@@ -34,18 +34,4 @@
     .select {
         color: red;
     }
-
-    .panel-body {
-        font-family: , cursive;
-        font-size: 24px;
-        color: #6e6e6e;
-    }
-
-    .quote {
-        cursor: pointer;
-    }
-
-    .quote:hover {
-        background-color: #ffe2e2;
-    }
 </style>
