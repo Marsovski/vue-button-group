@@ -14,8 +14,6 @@
 
 <script>
     import GroupButton from './components/GroupButton.vue';
-    import Button from './components/Button.vue';
-
     export default {
         data: function () {
             return {
@@ -32,8 +30,7 @@
             }
         },
         components: {
-            appGroupButton: GroupButton,
-            appButton: Button
+            appGroupButton: GroupButton
         }
     }
 </script>
