@@ -1,26 +1,24 @@
 {
   "name": "vue-button-group",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "Milos Markovic <milos.markovic@outlook.com>",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot --port 8087",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "vue": "^2.0.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Marsovski/vue-button-group.git"
   },
-  "author": "Milos Markovic <milos.markovic@outlook.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Marsovski/vue-button-group/issues"
   },
-  "homepage": "https://github.com/Marsovski/vue-button-group#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^2.2.1"
+  },
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
