@@ -1,19 +1,19 @@
 <template>
-        <button
+    <button
             @click="selectBtn"
+            class="btn-group"
             :class="{ select: select ? selectClass = select : select }"
             type="button"
-            ><slot></slot>
-        </button>
+    ><slot></slot></button>
 </template>
 
 <script>
     export default {
         props: ['ides', 'select'],
-        data: function () {
+        data: function() {
             return {
                 selectClass: false
-            }
+            };
         },
         methods: {
             selectBtn() {
@@ -23,7 +23,7 @@
                 this.$emit('selectButtonEmit', this.ides);
             }
         }
-    }
+    };
 </script>
 
 <style>
